@@ -1,0 +1,71 @@
+html{
+  font-size: 62.5%;
+}
+
+body {
+  background-color: rgb(20, 20, 25);
+}
+
+@keyframes bug {
+  0% {left: 10%; top:15%;}
+  50% {left: 75%; top: 20%;}
+  100% {left: 10%; top:15%;}
+}
+@keyframes bug2 {
+  0% {left: 60%; top:35%;}
+  50% {left: 90%; top: 40%;}
+  100% {left: 60%; top:35%;}
+}
+@keyframes bug3 {
+  0% {left: 10%; top:80%;}
+  50% {left: 40%; top: 10%;}
+  100% {left: 10%; top:80%;}
+}
+@keyframes bug4 {
+  0% {left: 90%; top:80%;}
+  50% {left: 4%; top: 9%;}
+  100% {left: 90%; top:80%;}
+}
+@keyframes glow {
+  0%{ background-color: rgba(136, 106, 55, 0.05);}
+  50%{ background-color: rgba(223, 185, 69, 0.85);}
+    100%{ background-color: rgba(136, 106, 55, 0.05);}
+
+}
+
+
+.firefly{
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: rgba(136, 106, 55, 0.05);
+  border-radius: 40%;
+  filter: blur(5px);
+
+  animation-iteration-count: infinite, infinite;
+  animation-timing-function: ease-in-out, ease-in-out;
+
+}
+.firefly:hover{
+  cursor: grabbing;
+  animation-play-state: paused, running;
+}
+
+body .firefly:nth-child(1){
+  /* animation: bug 5s ease-in-out infinite; */
+  animation-name: bug, glow;
+  animation-duration: 5s, 1.2s;
+  animation-delay: 0s, 1s;
+}
+body .firefly:nth-child(2){
+  animation-name: bug2, glow;
+  animation-duration: 5s, 2s;
+  animation-delay: 1s, 2s;
+}
+body .firefly:nth-child(3){
+  animation-name: bug3, glow;
+  animation-duration: 4s, 1.5s;
+}
+body .firefly:nth-child(4){
+  animation-name: bug4, glow;
+  animation-duration: 5s, 1.4s;
