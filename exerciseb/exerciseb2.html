@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style media="screen">
+    .welll {
+      position: absolute;
+      width: auto;
+      height: auto;
+      right: 64%;
+      left: 33%;
+      top: 0%;
+      bottom: 0%;
+      background-color: rgb(55, 40, 30);
+    }
+
+
+    .wellr {
+      position: absolute;
+      width: auto;
+      height: auto;
+      right: 33%;
+      left: 64%;
+      top: 0%;
+      bottom: 0%;
+      background-color: rgb(55, 40, 30);
+    }
+
+    .line1 {
+      position: absolute;
+      width: auto;
+      height: auto;
+      right: 61%;
+      left: 38%;
+      top: 75%;
+      bottom: 5%;
+      background-color: orange;
+    }
+
+    .line2 {
+      position: absolute;
+      width: auto;
+      height: auto;
+      right: 38%;
+      left: 61%;
+      top: 75%;
+      bottom: 15%;
+      background-color: orange;
+    }
+
+    .click1 {
+      position: absolute;
+      font-family: helvetica;
+      font-size: 30pt;
+      left: 6%;
+      top: 40%;
+      width:200px;
+      height:50px;
+      background-color:orange;
+
+    }
+    .click2 {
+      position: absolute;
+      font-family: helvetica;
+      font-size: 30pt;
+      right: 6%;
+      top: 40%;
+      width:200px;
+      height:50px;
+      background-color:orange;
+
+    }
+
+    .red {
+      position: absolute;
+      animation:drop 2s linear infinite;
+      animation-play-state: running;
+      top: -50px;
+
+    }
+
+    .click1:hover ~ .red {
+      animation-play-state: running;
+    }
+    .click2:hover ~ .layer {
+      animation-play-state: running;
+    }
+
+    @keyframes drop {
+      0% {left: 47%; top:-15%;}
+      50% {left: 47%; top: 20%;}
+      100% {left: 47%; top:40%;}
+    }
+
+
+
+
+    .c1 {
+      position: absolute;
+      width: auto;
+      height: auto;
+      right: 42%;
+      left: 42%;
+      top: 69%;
+      bottom: 1%;
+      background-color: rgb(250, 230, 200);
+      border-radius: 50%;
+
+    }
+
+    .rc {
+      width: 50px;
+      height: 50px;
+      background-color: red;
+      border-radius: 50%;
+
+    }
+
+    .bl {
+      position: relative;
+      background-color: black;
+      height: 3px;
+      width: 50px;
+      top: 46px;
+    }
+
+    .e1 {
+      position: absolute;
+      width: auto;
+      height: auto;
+      right: 53%;
+      left: 43%;
+      top: 81%;
+      bottom: 14%;
+      background-color: rgb(70, 50, 50);
+      border-radius: 50%;
+    }
+
+    .e2 {
+      position: absolute;
+      width: auto;
+      height: auto;
+      right: 43%;
+      left: 53%;
+      top: 81%;
+      bottom: 14%;
+      background-color: rgb(70, 50, 50);
+      border-radius: 50%;
+    }
+
+    .r1 {
+      position: absolute;
+
+      left: 48.8%;
+      top: 81%;
+
+      width: 30px;
+      height: 50px;
+
+
+      animation: open 1s linear infinite;
+    }
+    .r2 {
+      position: absolute;
+
+      left: 48.3%;
+      top: 81%;
+
+      width: 0;
+      height: 0;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+
+      animation: tri 1s linear infinite;
+    }
+
+
+    .r3 {
+      position: absolute;
+
+      left: 44%;
+      bottom: 0%;
+
+      width: 40px;
+      height: 40px;
+
+
+      border-bottom: 50px solid rgb(250, 150, 150);
+      z-index: -1;
+    }
+
+    .r4 {
+      position: absolute;
+
+      right: 44%;
+      bottom: 0%;
+
+      width: 40px;
+      height: 40px;
+
+      border-bottom: 50px solid rgb(250, 150, 150);
+      z-index: -1;
+    }
+
+
+    .wrapper {
+      position: absolute;
+
+      left: 40.3%;
+      top: 81%;
+      width: 300px;
+      animation: Arc3 2s linear infinite;
+    }
+
+    .hand {
+      border-radius: 50%;
+      display: inline-block;
+      padding: 10px;
+      background: rgb(250, 230, 200);
+      animation: Arc4 2s linear infinite;
+    }
+
+    .wrapper2 {
+      position: absolute;
+
+      left: 40.3%;
+      top: 81%;
+      width: 300px;
+      animation: Arc1 2s linear infinite;
+    }
+
+    .hand2 {
+      border-radius: 50%;
+      display: inline-block;
+      padding: 10px;
+      background: rgb(250, 230, 200);
+      animation: Arc2 2s linear infinite;
+    }
+    .layer{
+      position: absolute;
+      width: auto;
+      height: auto;
+      right: 33%;
+      left: 33%;
+
+      bottom: 0%;
+      background-color: rgba(55, 40, 30, 0.4);
+      animation:lay 5s linear infinite;
+      animation-play-state:paused;
+    }
+@keyframes lay {
+  0% {left: 33%; top:100%;}
+  50% {left: 33%; top: 50%;}
+  100% {left: 33%; top:0%;}
+}
+    @keyframes open {
+      0% {
+        border-bottom: 50px solid orange;
+      }
+
+      50% {
+        border-bottom: 30px solid orange;
+      }
+
+      100% {
+        border-bottom: 50px solid orange;
+      }
+    }
+
+    @keyframes Arc1 {
+      0% {
+        transform: rotate(180deg);
+      }
+
+      50% {
+        transform: rotate(90deg);
+      }
+
+      100% {
+        transform: rotate(180deg);
+      }
+    }
+
+    @keyframes Arc2 {
+      0% {
+        transform: rotate(-90deg);
+      }
+
+      50% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(-90deg);
+      }
+    }
+
+    @keyframes Arc3 {
+      0% {
+        transform: rotate(90deg);
+      }
+
+      50% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(90deg);
+      }
+    }
+
+    @keyframes Arc4 {
+      0% {
+        transform: rotate(-90deg);
+      }
+
+      50% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(-90deg);
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="welll">
+  </div>
+  <div class="wellr">
+  </div>
+  <div class="line1">
+  </div>
+  <div class="line2">
+  </div>
+  <div class="c1">
+  </div>
+  <div class="e1">
+  </div>
+  <div class="e2">
+  </div>
+  <div class="r1">
+  </div>
+  <div class="wrapper">
+    <div class="hand"></div>
+  </div>
+
+  <div class="wrapper2">
+    <div class="hand2"></div>
+  </div>
+  <div class="r3">
+  </div>
+  <div class="r4">
+  </div>
+
+  <div class="red">
+    <div class="rc">
+      <div class="bl"></div>
+    </div>
+  </div>
+  <div class="click1">
+hover
+  </div>
+  <div class="click2">
+hover
+  </div>
+  <div class="layer">
+
+  </div>
+
+</body>
+
+</html>
