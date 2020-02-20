@@ -56,43 +56,41 @@
       font-size: 30pt;
       left: 6%;
       top: 40%;
-      width:200px;
-      height:50px;
-      background-color:orange;
+      width: 200px;
+      height: 50px;
+      background-color: orange;
 
     }
+
     .click2 {
       position: absolute;
       font-family: helvetica;
       font-size: 30pt;
       right: 6%;
       top: 40%;
-      width:200px;
-      height:50px;
-      background-color:orange;
+      width: 200px;
+      height: 50px;
+      background-color: orange;
 
     }
 
     .red {
       position: absolute;
-      animation:drop 2s linear infinite;
+      animation: drop 2s linear infinite;
       animation-play-state: paused;
-      
+      top: -50px;
 
     }
 
-    .click1:hover ~ .red {
-      animation-play-state: running;
-    }
-    .click2:hover ~ .layer {
+    .click1:hover~.red {
       animation-play-state: running;
     }
 
-    @keyframes drop {
-      0% {left: 47%; top:-15%;}
-      50% {left: 47%; top: 20%;}
-      100% {left: 47%; top:40%;}
+    .click2:hover~.layer {
+      animation-play-state: running;
     }
+
+
 
 
 
@@ -111,6 +109,8 @@
     }
 
     .rc {
+
+      top: -50px;
       width: 50px;
       height: 50px;
       background-color: red;
@@ -119,12 +119,15 @@
     }
 
     .bl {
+
+      top: -50px;
       position: relative;
       background-color: black;
       height: 3px;
       width: 50px;
       top: 46px;
     }
+
 
     .e1 {
       position: absolute;
@@ -162,6 +165,7 @@
 
       animation: open 1s linear infinite;
     }
+
     .r2 {
       position: absolute;
 
@@ -238,7 +242,8 @@
       background: rgb(250, 230, 200);
       animation: Arc2 2s linear infinite;
     }
-    .layer{
+
+    .layer {
       position: absolute;
       width: auto;
       height: auto;
@@ -247,14 +252,44 @@
 
       bottom: 0%;
       background-color: rgba(55, 40, 30, 0.4);
-      animation:lay 5s linear infinite;
-      animation-play-state:paused;
+      animation: lay 5s linear infinite;
+      animation-play-state: paused;
     }
-@keyframes lay {
-  0% {left: 33%; top:100%;}
-  50% {left: 33%; top: 50%;}
-  100% {left: 33%; top:0%;}
-}
+
+    @keyframes lay {
+      0% {
+        left: 33%;
+        top: 100%;
+      }
+
+      50% {
+        left: 33%;
+        top: 50%;
+      }
+
+      100% {
+        left: 33%;
+        top: 0%;
+      }
+    }
+
+    @keyframes drop {
+      0% {
+        left: 47%;
+        top: -15%;
+      }
+
+      50% {
+        left: 47%;
+        top: 20%;
+      }
+
+      100% {
+        left: 47%;
+        top: 40%;
+      }
+    }
+
     @keyframes open {
       0% {
         border-bottom: 50px solid orange;
@@ -357,21 +392,25 @@
   <div class="r4">
   </div>
 
-  <div class="red">
-    <div class="rc">
-      <div class="bl"></div>
-    </div>
-  </div>
+
+
+
   <div class="click1">
-hover
+    hover
   </div>
   <div class="click2">
-hover
+    hover
   </div>
   <div class="layer">
 
   </div>
+  <div class="red">
 
+
+    <div class="rc">
+      <div class="bl"></div>
+    </div>
+  </div>
 </body>
 
 </html>
