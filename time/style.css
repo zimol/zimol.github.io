@@ -1,0 +1,18 @@
+body {
+  background-color: black;
+}
+
+#timer {
+  font-family: 'Roboto Condensed';
+  color: yellow;
+  border: white;
+	-webkit-text-stroke: .6px white;
+  position: fixed;
+  text-align: center;
+    -webkit-transform:translate(-50%,-50%);
+  left: 50%;
+  top: 70%;
+  font-size: 750px;
+  z-index: -10;
+  opacity:0.1;
+}
